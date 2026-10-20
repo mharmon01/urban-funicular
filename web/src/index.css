@@ -1,0 +1,39 @@
+:root {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+body { margin: 0; }
+main { max-width: 1200px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.5rem; }
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; }
+.field label { font-weight: 600; }
+.field input { padding: 6px; font: inherit; }
+.search-form input[aria-invalid] { border: 2px solid #c62828; }
+.field-error { color: #c62828; font-weight: normal; }
+.form-actions { display: flex; gap: 8px; align-items: flex-end; }
+
+button { padding: 6px 12px; font: inherit; cursor: pointer; }
+button:disabled { cursor: default; }
+
+.status { color: #555; }
+.error-banner { background: #fdecea; border: 1px solid #c62828; padding: 8px 12px; margin-bottom: 12px; }
+.error-banner ul { margin: 4px 0 0; }
+.stale { opacity: 0.5; }
+
+.results { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.results th, .results td { border-bottom: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.results .num { text-align: right; }
+.results-wrap { overflow-x: auto; }
+
+.pagination { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 12px; }
+.pagination [aria-current='page'] { font-weight: bold; }
+.page-info { margin: 0 8px; }
